@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    background-color: aqua;
+    gap: 15px;
+    padding: 25px 25px;
+    /* This is new: it lines up all items vertically in the center */
+    align-items: center; 
+}
+
+.navbar {
+    display: flex;
+    text-align: center;
+}
+
+.logo {
+    font-size: 25px;
+}
+
+.search-bar {
+    display: flex;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 250px;
+    height: 30px;
+    /* Added this to prevent the input field from overflowing */
+    overflow: hidden; 
+}
+
+.search-bar input {
+    border: none;
+    width: 100%; /* Changed from fixed width to be responsive */
+    padding: 5px;
+    outline: none; /* Removes the blue glow on click */
+}
+
+.magnify-search {
+    border: none;
+    background-color: yellow;
+    /* Added padding to make the icon look better */
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+}
+
+/* This is the <nav> element */
+.container {
+    /* This single line pushes the nav bar all the way to the right */
+    margin-left: auto;
+}
+
+/* This is the <ul> inside the <nav> */
+.items {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+    /* The 'margin-left: auto' was removed from here 
+       since we put it on the parent .container */
